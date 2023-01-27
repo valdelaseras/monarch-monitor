@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #201c1a;
+    --secondary-color: #111;
+    --tertiary-color: #eaeaea;
+
+    --primary-accent-color: #e3792c;
+    --secondary-accent-color: #ffda8e;
+
+    --primary-font-color: var(--primary-color);
+    --secondary-font-color: var(--secondary-color);
+    --tertiary-font-color: var(--tertiary-color);
+
+    .theme-primary {
+        background-color: var(--tertiary-color);
+        color: var(--primary-font-color);
+
+        a {
+            color: var(--primary-font-color);
+        }
+
+        a:hover {
+            color: var(--primary-accent-color);
+        }
+    }
+
+    .theme-secondary {
+        background-color: var(--primary-color);
+        color: var(--tertiary-font-color);
+
+        a {
+            color: var(--tertiary-font-color);
+        }
+
+        a:hover {
+            color: var(--primary-accent-color);
+        }
+    }
+}
+

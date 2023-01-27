@@ -1,0 +1,60 @@
+@use "/src/styles/variables";
+
+/*@start body*/
+body {
+    color: var(--primary-font-color);
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+}
+
+@media only screen and ( min-width: variables.$break-point) {
+    body {
+        font-size: 16px;
+    }
+}
+/*@end body*/
+
+/*@start headings*/
+h1, h2, h3, h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2.subtitle,
+h3.subtitle,
+h4.subtitle {
+    letter-spacing: variables.$letter-spacing;
+}
+/*@end headings*/
+
+/*@start p*/
+p {
+    line-height: 1.5rem;
+}
+/*@end p*/
+
+/*@start font xl*/
+.font-xl {
+    font-size: 10rem;
+    font-weight: 800;
+    letter-spacing: variables.$letter-spacing;
+    margin: initial;
+}
+
+@media only screen and ( min-width: variables.$break-point) {
+    .font-xl {
+        font-size: 20rem;
+    }
+}
+/*@end font xl*/
+
+/*@start a*/
+a {
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-font-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 150ms;
+}
+/*@end a*/
