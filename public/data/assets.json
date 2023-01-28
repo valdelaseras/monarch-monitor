@@ -1,0 +1,47 @@
+[
+  {
+    "stage": "egg",
+    "alt": "Image of a butterfly egg",
+    "src": ""
+  },
+  {
+    "stage": "first instar",
+    "alt": "Image of a first instar butterfly",
+    "src": ""
+  },
+  {
+    "stage": "second instar",
+    "alt": "Image of a second instar butterfly",
+    "src": ""
+  },
+  {
+    "stage": "third instar",
+    "alt": "Image of a third instar butterfly",
+    "src": ""
+  },
+  {
+    "stage": "fourth instar",
+    "alt": "Image of a fourth instar butterfly",
+    "src": ""
+  },
+  {
+    "stage": "fifth instar",
+    "alt": "Image of a fifth instar butterfly",
+    "src": ""
+  },
+  {
+    "stage": "J hanging",
+    "alt": "Image of a J hanging butterfly",
+    "src": ""
+  },
+  {
+    "stage": "pupa",
+    "alt": "Image of a pupa",
+    "src": ""
+  },
+  {
+    "stage": "adult",
+    "alt": "Image of an adult butterfly",
+    "src": ""
+  }
+]

@@ -4,12 +4,43 @@
       <div class="column">
         <div class="column three">
           <div class="content">
-            <p>1</p>
+            <p>
+              A Vue.js PWA demo for an upcoming interview. Weekend hackaton, go!
+            </p>
+            <p>
+              Please see the used
+              <span class="font-extra-bold">tech and tools →</span>
+            </p>
           </div>
         </div>
         <div class="column three">
           <div class="content">
-            <p>2</p>
+            <ul class="compact-list">
+              <li>
+                <p>Vue 3</p>
+              </li>
+              <li>
+                <p>Vue Router</p>
+              </li>
+              <li>
+                <p>TypeScript</p>
+              </li>
+              <li>
+                <p>PWA</p>
+              </li>
+              <li>
+                <p>Axios</p>
+              </li>
+              <li>
+                <p>Vitest</p>
+              </li>
+              <li>
+                <p>SCSS</p>
+              </li>
+              <li>
+                <p>Git</p>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="column three">
@@ -56,6 +87,7 @@ export default {
 .footer {
   display: inline-block;
   width: 100vw;
+  height: auto;
 }
 
 .footer-link-list > li:not(:last-child) {

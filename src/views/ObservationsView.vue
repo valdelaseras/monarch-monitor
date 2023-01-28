@@ -1,22 +1,13 @@
 <template>
-  <section class="section">
-    <div class="grid">
-      <div class="column">
-        <div class="column">
-          <div class="content">
-            <h2>Observations</h2>
-          </div>
-        </div>
-        <COverview />
-      </div>
-    </div>
-  </section>
+  <article class="article">
+    <ObservationsSection />
+  </article>
 </template>
 
 <script>
-import COverview from "@/components/observations/Overview.vue";
+import ObservationsSection from "@/components/sections/Observations.vue";
 export default {
   name: "ObservationsView",
-  components: { COverview },
+  components: { ObservationsSection },
 };
 </script>

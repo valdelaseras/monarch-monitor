@@ -4,7 +4,7 @@
       <div class="content">
         <div class="nav-branding">
           <img
-            src="src/assets/logo/butterfly.svg"
+            src="/img/logo/butterfly.svg"
             class="nav-branding-logo"
             alt="icon of a butterfly"
           />
@@ -16,12 +16,18 @@
       <div class="content">
         <ul class="primary-nav-list" id="nav-list">
           <li>
-            <RouterLink class="primary-nav-link" to="/observations/new">
+            <RouterLink
+              class="primary-nav-link"
+              :to="{ path: '/observations/new' }"
+            >
               Add new
             </RouterLink>
           </li>
           <li>
-            <RouterLink class="primary-nav-link" to="/observations">
+            <RouterLink
+              class="primary-nav-link"
+              :to="{ path: '/observations' }"
+            >
               See all
             </RouterLink>
           </li>

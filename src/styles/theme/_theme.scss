@@ -1,0 +1,25 @@
+.theme-primary {
+    background-color: var(--tertiary-color);
+    color: var(--primary-font-color);
+
+    a {
+        color: var(--primary-font-color);
+    }
+
+    a:hover {
+        color: var(--primary-accent-color);
+    }
+}
+
+.theme-secondary {
+    background-color: var(--primary-color);
+    color: var(--tertiary-font-color);
+
+    a {
+        color: var(--tertiary-font-color);
+    }
+
+    a:hover {
+        color: var(--primary-accent-color);
+    }
+}

@@ -30,7 +30,8 @@ h4.subtitle {
 
 /*@start p*/
 p {
-    line-height: 1.5rem;
+    line-height: 2rem;
+    font-weight: 100;
 }
 /*@end p*/
 
@@ -58,3 +59,13 @@ a {
     transition: color 150ms;
 }
 /*@end a*/
+
+/*@start font weights*/
+.font-light { font-weight: 300; }
+.font-regular { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semiBold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extra-bold { font-weight: 800; }
+.font-black { font-weight: 900; }
+/*@end font weights*/

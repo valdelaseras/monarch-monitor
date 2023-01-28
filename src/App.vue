@@ -13,4 +13,3 @@ import CFooter from "@/components/Footer.vue";
   </main>
   <c-footer />
 </template>
-

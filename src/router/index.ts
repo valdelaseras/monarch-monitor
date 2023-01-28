@@ -17,28 +17,31 @@ const router = createRouter({
       component: LandingView,
     },
     {
-      path: "/observations",
-      name: "observations",
-      component: ObservationsView,
-      children: [
-        {
-          path: "/",
-          component: COverview,
-        },
-        {
-          path: "/new",
-          component: CForm,
-        },
-        {
-          path: "/observation/:id",
-          component: CDetails,
-        },
-      ],
-    },
-    {
       path: "/about",
       name: "About",
       component: AboutView,
+    },
+    {
+      path: "/observations",
+      name: "Observations",
+      component: ObservationsView,
+      children: [
+        {
+          path: "",
+          name: "overview",
+          component: COverview,
+        },
+        {
+          path: "new",
+          name: "new",
+          component: CForm,
+        },
+        {
+          path: ":id",
+          name: "details",
+          component: CDetails,
+        },
+      ],
     },
   ],
 });

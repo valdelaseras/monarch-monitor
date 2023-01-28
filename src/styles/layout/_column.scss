@@ -1,8 +1,10 @@
 @use "/src/styles/variables";
 
 /*@start column*/
-@media only screen and ( min-width: variables.$break-point) {
+@media only screen and (
+min-width: variables.$break-point) {
     .column {
+        display: inline-block;
         width: 100%;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;

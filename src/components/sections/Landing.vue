@@ -4,9 +4,7 @@
       <div class="column">
         <div class="content">
           <h1 class="font-xl">MoMo</h1>
-          <h2 class="subtitle">
-            Monarch Monitor
-          </h2>
+          <h2 class="subtitle">Monarch Monitor</h2>
         </div>
       </div>
     </div>
@@ -22,7 +20,6 @@ export default {
 <style scoped>
 .section {
   min-height: 80vh;
-  display: flex;
   flex-direction: column;
   justify-content: center;
 }
