@@ -84,12 +84,18 @@ export default {
 <style lang="scss" scoped>
 @use "/src/styles/variables";
 
+/*@start footer*/
 .footer {
-  display: inline-block;
+  display: flow-root;
   width: 100vw;
   height: auto;
+  position: relative;
+  bottom: 0;
+  padding: variables.$vertical-spacing;
 }
+/*@end footer*/
 
+/*@start footer link list + link*/
 .footer-link-list > li:not(:last-child) {
   padding-bottom: variables.$default-padding;
 }
@@ -98,4 +104,5 @@ export default {
   font-weight: 100;
   text-transform: uppercase;
 }
+/*@end footer link list + link*/
 </style>

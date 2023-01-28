@@ -1,8 +1,7 @@
 @use "/src/styles/variables";
 
 /*@start column*/
-@media only screen and (
-min-width: variables.$break-point) {
+.column {
     .column {
         display: inline-block;
         width: 100%;
@@ -19,7 +18,9 @@ min-width: variables.$break-point) {
         height: 0;
         visibility: hidden;
     }
+}
 
+@media only screen and ( min-width: variables.$break-point) {
     .column.phi.a {
         width: 38%;
     }

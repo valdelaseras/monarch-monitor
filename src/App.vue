@@ -8,7 +8,7 @@ import CFooter from "@/components/Footer.vue";
   <header>
     <c-nav />
   </header>
-  <main>
+  <main class="main">
     <RouterView />
   </main>
   <c-footer />

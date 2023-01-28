@@ -1,6 +1,9 @@
+@use "/src/styles/variables";
+
 /*@start section*/
 .section {
     display: flex;
     height: auto;
+    padding: variables.$vertical-spacing;
 }
 /*@end section*/

@@ -1,0 +1,51 @@
+@use "/src/styles/variables";
+
+/*@start form label*/
+.form label {
+    display: block;
+    margin: 10px 0;
+}
+
+//@TODO: not *all* labels, only with checkbox and radio type input children
+.form label {
+    cursor: pointer;
+}
+/*@end label*/
+
+/*@start form input, textarea*/
+.form input[type="text"],
+.form textarea {
+    width: 100%;
+    display: block;
+}
+/*@end form input, textarea*/
+
+/*@start fieldset*/
+.fieldset {
+    padding: variables.$default-padding;
+    margin-bottom: 20px;
+    border: 1px solid var(--primary-color);
+}
+/*@end fieldset*/
+
+/*@start select*/
+//@TODO: :after chevron up & down
+.form select:hover {
+    cursor: pointer;
+}
+/*@end select*/
+
+/*start form elements shared styles*/
+.form input[type="text"],
+.form textarea,
+.form select {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: var(--primary-accent-color);
+    border: none;
+    border-radius: variables.$border-radius-xs;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/*end form elements shared styles*/

@@ -9,21 +9,17 @@
       <div class="column phi b">
         <div class="content">
           <ul>
-            <li>{{ observation?.id }}</li>
-            <li>{{ observation?.event }}</li>
-            <li>{{ observation?.species }}</li>
-            <li>{{ observation?.location }}</li>
-            <li>{{ observation?.datetime }}</li>
-            <li>{{ observation?.stage }}</li>
-            <li>{{ observation?.note }}</li>
-            <li>{{ observation?.sex }}</li>
-            <li>{{ observation?.alive }}</li>
+            <li v-for="(value, key) in observation">
+              <p>
+                <span class="font-extra-bold">{{ key }}:</span> {{ value }}
+              </p>
+            </li>
           </ul>
         </div>
       </div>
       <div class="column phi a">
         <div class="content">
-<!--          <img src="{{ observation?.src }}" alt="{{ observation?.alt }}" />-->
+          <img src="{{ observation?.src }}" alt="{{ observation?.alt }}" />
         </div>
       </div>
     </div>
@@ -48,8 +44,8 @@ export default {
   },
   methods: {
     getObservation(id: string) {
-      ObservationService.getObservationById( id ).then( observation =>
-          this.observation = observation
+      ObservationService.getObservationById(id).then(
+        (observation) => (this.observation = observation)
       );
     },
   },

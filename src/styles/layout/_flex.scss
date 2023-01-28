@@ -1,0 +1,17 @@
+/*@start flex*/
+.flex {
+    display: flex;
+}
+/*@end flex*/
+
+/*@start flex column*/
+.flex-column {
+    flex-direction: column;
+}
+/*@end flex column*/
+
+/*@start flex space-around*/
+.space-around {
+    justify-content: space-around;
+}
+/*@end flex space-around*/

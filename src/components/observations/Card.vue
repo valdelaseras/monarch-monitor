@@ -5,7 +5,7 @@
         <h4>{{ stage }}</h4>
       </header>
       <div class="card-body">
-        <!--        <img src="{{ src }}" alt="{{ alt }}" />-->
+        <img class="card-image" src="{{ src }}" alt="{{ alt }}" />
       </div>
       <footer class="card-footer">
         <p>{{ location }}</p>
@@ -15,17 +15,14 @@
 </template>
 
 <script lang="ts">
-import axios from "axios";
-
 export default {
   name: "CCard",
   props: {
     id: String,
     stage: String,
     location: String,
-  },
-  methods() {
-    axios.get("/data/assets.json").then((response) => console.log(response));
+    src: String,
+    alt: String,
   },
 };
 </script>
@@ -40,11 +37,23 @@ export default {
 }
 /*@end card*/
 
-/*@start card header,body,footer*/
+/*@start
+card-header,
+card-body,
+card-footer*/
 .card-header,
-.card-body,
 .card-footer {
   padding: 10px variables.$default-padding;
 }
-/*@end card header,body,footer*/
+/*@end
+card-header,
+card-body,
+card-footer*/
+
+/*@start card-image*/
+.card-image {
+  width: 100%;
+  height: auto;
+}
+/*@end card-image*/
 </style>

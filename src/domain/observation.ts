@@ -10,34 +10,40 @@ export interface IObservation {
   note?: string;
 }
 
-enum Stage {
-  EGG,
-  FIRST_INSTAR,
-  SECOND_INSTAR,
-  THIRD_INSTAR,
-  FOURTH_INSTAR,
-  FIFTH_INSTAR,
-  J,
-  PUPA,
-  ADULT,
+export interface IObservationListItem extends IObservation {
+  src: string;
+  alt: string;
 }
 
-enum ObservationEvent {
-  DEPOSITING_EGGS,
-  HATCHING,
-  MOLTING,
-  J_HANGING,
-  ECLOSING,
-  ENCLOSING,
+export enum Stage {
+  EGG = "egg",
+  FIRST_INSTAR = "first instar",
+  SECOND_INSTAR = "second instar",
+  THIRD_INSTAR = "third instar",
+  FOURTH_INSTAR = "fourth instar",
+  FIFTH_INSTAR = "fifth instar",
+  J = "j hanging",
+  PUPA = "pupa",
+  ADULT = "adult",
 }
 
-enum Species {
-  DANAUS_PLEXIPPUS,
-  DANAUS_CHRYSIPPUS,
+// @TODO: add more events
+export enum ObservationEvent {
+  DEPOSITING_EGGS = "depositing eggs",
+  HATCHING = "hatching",
+  MOLTING = "molting",
+  J_HANGING = "j hanging",
+  ENCLOSING = "enclosing",
+  ECLOSING = "eclosing",
+}
+
+export enum Species {
+  DANAUS_PLEXIPPUS = "danaus plexippus",
+  // @TODO: would be fun some time later, DANAUS_CHRYSIPPUS etc.
 }
 
 enum Sex {
-  UNDETERMINED,
-  FEMALE,
-  MALE,
+  UNDETERMINED = "undetermined",
+  FEMALE = "female",
+  MALE = "male",
 }
