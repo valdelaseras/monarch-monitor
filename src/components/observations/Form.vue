@@ -2,7 +2,7 @@
   <div class="column">
     <div class="column">
       <div class="content">
-        <h2>Add new observation</h2>
+        <h3>Add new observation</h3>
       </div>
     </div>
     <div class="column">

@@ -2,7 +2,7 @@
   <div class="column">
     <div class="column">
       <div class="content">
-        <h2>Observation {{ observation?.id }}</h2>
+        <h3>Observation {{ observation?.id }}</h3>
       </div>
     </div>
     <div class="column">

@@ -92,6 +92,7 @@ export default {
   position: relative;
   bottom: 0;
   padding: variables.$vertical-spacing;
+  z-index: -10; // ensure mobile menu lays over the footer
 }
 /*@end footer*/
 
