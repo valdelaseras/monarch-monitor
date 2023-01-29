@@ -1,7 +1,7 @@
 <template>
   <fieldset class="fieldset">
     <legend>{{ legend }}</legend>
-    <select id="{{ id }}">
+    <select :id="id">
       <option
         v-for="option in options"
         :key="option.label"

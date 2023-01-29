@@ -1,8 +1,8 @@
 <template>
   <fieldset class="fieldset">
     <legend>{{ legend }}</legend>
-    <label for="{{ id }}">{{ label }}</label>
-    <textarea id="{{ id }}"></textarea>
+    <label :for="id">{{ label }}</label>
+    <textarea :id="id"></textarea>
   </fieldset>
 </template>
 

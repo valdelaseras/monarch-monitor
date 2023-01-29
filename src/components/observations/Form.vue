@@ -1,4 +1,6 @@
 <!--@TODO: some options should be disabled based on specific selection options-->
+<!--@TODO: DatePicker-->
+<!--@TODO: Form submission-->
 <template>
   <div class="column">
     <div class="column">
@@ -21,7 +23,13 @@
             />
             <CSelect id="event" legend="Event" :options="eventOptions" />
             <CRadiogroup id="sex" legend="Sex" :options="sexOptions" />
-            <CCheckbox id="alive" legend="State of butterfly" label="Alive" />
+            <CCheckbox
+              id="alive"
+              legend="State of butterfly"
+              label="Alive"
+              checked="true"
+              :aria-checked="true"
+            />
             <CInput
               id="location"
               legend="Location"
@@ -46,7 +54,7 @@ import CSelect from "@/components/form-fieldsets/Select.vue";
 import CRadiogroup from "@/components/form-fieldsets/Radiogroup.vue";
 import CTextarea from "@/components/form-fieldsets/Textarea.vue";
 import CCheckbox from "@/components/form-fieldsets/Checkbox.vue";
-import CInput from "@/components/form-fieldsets/CInput.vue";
+import CInput from "@/components/form-fieldsets/Input.vue";
 
 interface IOption {
   value: string;
@@ -65,7 +73,14 @@ function enumToOptions(enumerator: { [key: string]: string }): IOption[] {
 
 export default {
   name: "CForm",
-  components: {CInput, CCheckbox, CTextarea, CRadiogroup, CSelect, Datepicker },
+  components: {
+    CInput,
+    CCheckbox,
+    CTextarea,
+    CRadiogroup,
+    CSelect,
+    Datepicker,
+  },
   data() {
     return {
       date: null,

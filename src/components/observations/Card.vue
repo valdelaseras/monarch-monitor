@@ -1,3 +1,4 @@
+<!--@TODO: turn into a generic card component-->
 <template>
   <RouterLink
     :to="{ path: `/observations/${id}` }"
