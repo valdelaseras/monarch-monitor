@@ -68,6 +68,7 @@ export default {
         "Axios",
         "Pinia",
         "Vitest",
+        "PlayWright",
         "SCSS",
         "Git",
       ],

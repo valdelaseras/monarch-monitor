@@ -34,16 +34,11 @@
 
 <script lang="ts">
 import { useRoute } from "vue-router";
-import type { IObservationListItem } from "@/domain/observation.interface";
 import { ObservationListItemService } from "@/services/observation-list-item.service";
-
-interface ICDetailsData {
-  observation: IObservationListItem | undefined;
-}
 
 export default {
   name: "ObservationDetails",
-  data(): ICDetailsData {
+  data() {
     return {
       observationListItem: undefined,
     };
