@@ -28,12 +28,11 @@
           <span class="bottom-line"></span>
         </label>
         <ul class="primary-nav-list" id="nav-list" role="menu">
-          <li v-for="link in links" :key="link.title">
+          <li v-for="link in links" :key="link.title" role="menuitem">
             <RouterLink
               @click="onClick"
               class="primary-nav-link"
               :to="link.path"
-              role="menuitem"
             >
               {{ link.title }}
             </RouterLink>

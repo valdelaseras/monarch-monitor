@@ -11,11 +11,12 @@
     <div class="column">
       <div class="column two">
         <div class="content">
-          <form class="form" role="form" aria-label="Add new observation form" @submit.prevent="onSubmit">
-            <!--        <fieldset class="fieldset">-->
-            <!--           <legend>Date</legend>-->
-            <!--           <Datepicker v-model="date" utc></Datepicker>-->
-            <!--        </fieldset>-->
+          <form
+            class="form"
+            role="form"
+            aria-label="Add new observation form"
+            @submit.prevent="onSubmit"
+          >
             <CSelect
               id="stage"
               legend="Current stage the organism"
@@ -48,7 +49,6 @@
 import { ObservationEvent } from "@/domain/observation-event.enum";
 import { Stage } from "@/domain/stage.enum";
 import { Sex } from "@/domain/sex.enum";
-import Datepicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
 import CSelect from "@/components/form-fieldsets/Select.vue";
 import CRadiogroup from "@/components/form-fieldsets/Radiogroup.vue";
@@ -79,7 +79,6 @@ export default {
     CTextarea,
     CRadiogroup,
     CSelect,
-    Datepicker,
   },
   data() {
     return {
