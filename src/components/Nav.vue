@@ -24,7 +24,11 @@
         </label>
         <ul class="primary-nav-list" id="nav-list" role="menu">
           <li v-for="link in links" :key="link.title">
-            <RouterLink class="primary-nav-link" :to="link.path" role="menuitem">
+            <RouterLink
+              class="primary-nav-link"
+              :to="link.path"
+              role="menuitem"
+            >
               {{ link.title }}
             </RouterLink>
           </li>

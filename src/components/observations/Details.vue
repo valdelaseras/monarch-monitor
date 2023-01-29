@@ -9,7 +9,11 @@
       <div class="column phi a">
         <div class="content">
           <ul role="list">
-            <li :key="property.key" v-for="property of observationDetails" role="listitem">
+            <li
+              :key="property.key"
+              v-for="property of observationDetails"
+              role="listitem"
+            >
               <p>
                 <span class="font-extra-bold">{{ property.key }}:</span>
                 {{ property.value }}

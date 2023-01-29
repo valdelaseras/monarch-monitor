@@ -10,85 +10,25 @@
       <div class="column two">
         <div class="content">
           <form class="form" role="form" aria-label="Add new observation form">
-            <!--            <fieldset class="fieldset">-->
-            <!--              <legend>Date</legend>-->
-            <!--              <Datepicker v-model="date" utc></Datepicker>-->
-            <!--            </fieldset>-->
-            <fieldset class="fieldset">
-              <legend>Current stage the organism</legend>
-              <select id="stage">
-                <option
-                  v-for="option in stageOptions"
-                  :key="option.label"
-                  :value="option.value"
-                >
-                  {{ option.label }}
-                </option>
-              </select>
-            </fieldset>
-            <fieldset class="fieldset">
-              <legend>Event</legend>
-              <select id="event">
-                <option
-                  v-for="option in eventOptions"
-                  :key="option.label"
-                  :value="option.value"
-                >
-                  {{ option.label }}
-                </option>
-              </select>
-            </fieldset>
-            <fieldset class="fieldset">
-              <legend>Sex</legend>
-              <div class="flex flex-column">
-                <div>
-                  <label for="undetermined">
-                    <input
-                      type="radio"
-                      name="sex"
-                      value="Undetermined"
-                      id="undetermined"
-                      :checked="true"
-                    />
-                    Undetermined
-                  </label>
-                </div>
-                <div>
-                  <label for="sex-f">
-                    <input type="radio" name="sex" value="f" id="sex-f" />
-                    Female
-                  </label>
-                </div>
-                <div>
-                  <label for="sex-m">
-                    <input type="radio" name="sex" value="M" id="sex-m" />
-                    Male
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="fieldset">
-              <legend>Organism state</legend>
-              <label for="alive">
-                <input
-                  type="checkbox"
-                  value="true"
-                  id="alive"
-                  :checked="true"
-                />
-                Alive
-              </label>
-            </fieldset>
-            <fieldset class="fieldset">
-              <legend>Location</legend>
-              <label for="location">General area</label>
-              <input type="text" id="location" />
-            </fieldset>
-            <fieldset class="fieldset">
-              <legend>Note</legend>
-              <label for="note">Additional remarks</label>
-              <textarea id="note"></textarea>
-            </fieldset>
+            <!--        <fieldset class="fieldset">-->
+            <!--           <legend>Date</legend>-->
+            <!--           <Datepicker v-model="date" utc></Datepicker>-->
+            <!--        </fieldset>-->
+            <CSelect
+              id="stage"
+              legend="Current stage the organism"
+              :options="stageOptions"
+            />
+            <CSelect id="event" legend="Event" :options="eventOptions" />
+            <CRadiogroup id="sex" legend="Sex" :options="sexOptions" />
+            <CCheckbox id="alive" legend="State of butterfly" label="Alive" />
+            <CInput
+              id="location"
+              legend="Location"
+              type="text"
+              label="General area"
+            />
+            <CTextarea legend="Note" id="note" label="Additional remarks" />
           </form>
         </div>
       </div>
@@ -99,8 +39,14 @@
 <script lang="ts">
 import { ObservationEvent } from "@/domain/observation-event.enum";
 import { Stage } from "@/domain/stage.enum";
+import { Sex } from "@/domain/sex.enum";
 import Datepicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
+import CSelect from "@/components/form-fieldsets/Select.vue";
+import CRadiogroup from "@/components/form-fieldsets/Radiogroup.vue";
+import CTextarea from "@/components/form-fieldsets/Textarea.vue";
+import CCheckbox from "@/components/form-fieldsets/Checkbox.vue";
+import CInput from "@/components/form-fieldsets/CInput.vue";
 
 interface IOption {
   value: string;
@@ -119,7 +65,7 @@ function enumToOptions(enumerator: { [key: string]: string }): IOption[] {
 
 export default {
   name: "CForm",
-  components: { Datepicker },
+  components: {CInput, CCheckbox, CTextarea, CRadiogroup, CSelect, Datepicker },
   data() {
     return {
       date: null,
@@ -131,6 +77,9 @@ export default {
     },
     eventOptions() {
       return enumToOptions(ObservationEvent);
+    },
+    sexOptions() {
+      return enumToOptions(Sex);
     },
   },
 };
