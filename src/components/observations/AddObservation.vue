@@ -55,6 +55,9 @@ import CRadiogroup from "@/components/form-fieldsets/Radiogroup.vue";
 import CTextarea from "@/components/form-fieldsets/Textarea.vue";
 import CCheckbox from "@/components/form-fieldsets/Checkbox.vue";
 import CInput from "@/components/form-fieldsets/Input.vue";
+import {useObservationsStore} from "@/store/observations";
+import {storeToRefs} from "pinia";
+import {onMounted} from "vue";
 
 interface IOption {
   value: string;
@@ -80,26 +83,21 @@ export default {
     CRadiogroup,
     CSelect,
   },
-  data() {
-    return {
-      date: null,
+  setup() {
+    const stageOptions = enumToOptions(Stage);
+    const eventOptions = enumToOptions(ObservationEvent);
+    const sexOptions = enumToOptions(Sex);
+
+    const onSubmit = () => {
+      console.log('submit form');
     };
-  },
-  computed: {
-    stageOptions() {
-      return enumToOptions(Stage);
-    },
-    eventOptions() {
-      return enumToOptions(ObservationEvent);
-    },
-    sexOptions() {
-      return enumToOptions(Sex);
-    },
-  },
-  methods: {
-    onSubmit() {
-      console.log("submit form");
-    },
+
+    return {
+      stageOptions,
+      sexOptions,
+      eventOptions,
+      onSubmit,
+    };
   },
 };
 </script>
