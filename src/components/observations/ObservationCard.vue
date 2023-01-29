@@ -24,7 +24,7 @@
 
 <script lang="ts">
 export default {
-  name: "CCard",
+  name: "ObservationCard",
   props: {
     id: String,
     stage: String,

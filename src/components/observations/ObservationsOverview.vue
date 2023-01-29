@@ -34,7 +34,7 @@
           :key="observation.id"
         >
           <div class="content">
-            <CCard v-bind="observation" />
+            <ObservationCard v-bind="observation" />
           </div>
         </div>
       </div>
@@ -43,12 +43,12 @@
 </template>
 
 <script lang="ts">
-import CCard from "@/components/observations/Card.vue";
+import ObservationCard from "@/components/observations/ObservationCard.vue";
 import { ObservationListItemService } from "@/services/observation-list-item.service";
 
 export default {
-  name: "COverview",
-  components: { CCard },
+  name: "ObservationsOverview",
+  components: { ObservationCard },
   data() {
     return {
       observations: [],

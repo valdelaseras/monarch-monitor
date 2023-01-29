@@ -1,6 +1,6 @@
-<!--@TODO: some options should be disabled based on specific selection options-->
+<!--@TODO: Form flows: some options should be disabled or auto selected based on specific form selections-->
 <!--@TODO: DatePicker-->
-<!--@TODO: Form submission-->
+<!--@TODO: Form submission, expand the form-fieldset components with more extensive options and proper form handling-->
 <template>
   <div class="column">
     <div class="column">
@@ -11,7 +11,7 @@
     <div class="column">
       <div class="column two">
         <div class="content">
-          <form class="form" role="form" aria-label="Add new observation form">
+          <form class="form" role="form" aria-label="Add new observation form" @submit.prevent="onSubmit">
             <!--        <fieldset class="fieldset">-->
             <!--           <legend>Date</legend>-->
             <!--           <Datepicker v-model="date" utc></Datepicker>-->
@@ -72,7 +72,7 @@ function enumToOptions(enumerator: { [key: string]: string }): IOption[] {
 }
 
 export default {
-  name: "CForm",
+  name: "AddObservation",
   components: {
     CInput,
     CCheckbox,
@@ -95,6 +95,11 @@ export default {
     },
     sexOptions() {
       return enumToOptions(Sex);
+    },
+  },
+  methods: {
+    onSubmit(){
+      console.log("submit form");
     },
   },
 };

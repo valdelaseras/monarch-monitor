@@ -8,7 +8,7 @@
               A Vue.js PWA demo for an upcoming interview. Weekend hackaton, go!
             </p>
             <p>
-              Please see the used
+              Please see the stack of
               <span class="font-extra-bold">tech and tools →</span>
             </p>
           </div>
@@ -64,7 +64,9 @@ export default {
         "Vue Router",
         "Vue Datepicker",
         "TypeScript",
+        "PWA",
         "Axios",
+        "Pinia",
         "Vitest",
         "SCSS",
         "Git",

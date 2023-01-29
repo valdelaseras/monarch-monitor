@@ -1,3 +1,4 @@
+<!--@TODO: automatically close menu on mobile after navigation action-->
 <template>
   <nav class="nav theme-primary" role="navigation">
     <div class="column">

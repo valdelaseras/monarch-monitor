@@ -4,9 +4,9 @@ import LandingView from "../views/LandingView.vue";
 import ObservationsView from "../views/ObservationsView.vue";
 import AboutView from "../views/AboutView.vue";
 // components
-import CForm from "@/components/observations/Form.vue";
-import CDetails from "@/components/observations/Details.vue";
-import COverview from "@/components/observations/Overview.vue";
+import AddObservation from "@/components/observations/AddObservation.vue";
+import ObservationDetails from "@/components/observations/ObservationDetails.vue";
+import ObservationsOverview from "@/components/observations/ObservationsOverview.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,17 +29,17 @@ const router = createRouter({
         {
           path: "",
           name: "overview",
-          component: COverview,
+          component: ObservationsOverview,
         },
         {
           path: "new",
           name: "new",
-          component: CForm,
+          component: AddObservation,
         },
         {
           path: ":id",
           name: "details",
-          component: CDetails,
+          component: ObservationDetails,
         },
       ],
     },

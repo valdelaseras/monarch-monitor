@@ -90,7 +90,7 @@ export default {
           href: "https://github.com/valdelaseras/monarch-monitor",
         },
         {
-          title: "My LinkedIn",
+          title: "LinkedIn",
           href: "https://www.linkedin.com/in/robin-scholtes-488964115",
         },
       ],

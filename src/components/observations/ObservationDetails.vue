@@ -42,7 +42,7 @@ interface ICDetailsData {
 }
 
 export default {
-  name: "CDetails",
+  name: "ObservationDetails",
   data(): ICDetailsData {
     return {
       observationListItem: undefined,
@@ -58,7 +58,7 @@ export default {
   },
   computed: {
     // to display the key / values of every prop in an observation: IObservationListItem,
-    // except the src and alt
+    // in a list, except for the src and alt props
     observationDetails() {
       if (!this.observationListItem) return [];
       return Object.keys(this.observationListItem)
