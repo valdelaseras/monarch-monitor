@@ -17,7 +17,11 @@
     </div>
     <div class="column">
       <div class="content">
-        <input type="checkbox" id="menu-checkbox" class="menu-checkbox" />
+        <input
+          type="checkbox"
+          id="menu-checkbox"
+          class="menu-checkbox"
+        />
         <label for="menu-checkbox" class="menu-toggle" id="menu-toggle">
           <span class="top-line"></span>
           <span class="middle-line"></span>
@@ -26,6 +30,7 @@
         <ul class="primary-nav-list" id="nav-list" role="menu">
           <li v-for="link in links" :key="link.title">
             <RouterLink
+              @click="onClick"
               class="primary-nav-link"
               :to="link.path"
               role="menuitem"
@@ -50,6 +55,11 @@ export default {
         { title: "About momo", path: "/about" },
       ],
     };
+  },
+  methods: {
+    onClick() {
+      // do something
+    },
   },
 };
 </script>
