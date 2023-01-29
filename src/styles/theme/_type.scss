@@ -37,7 +37,7 @@ p {
 
 /*@start font xl*/
 .font-xl {
-    font-size: 10rem;
+    font-size: 5em;
     font-weight: 800;
     letter-spacing: variables.$letter-spacing;
     margin: initial;
@@ -45,7 +45,7 @@ p {
 
 @media only screen and ( min-width: variables.$break-point) {
     .font-xl {
-        font-size: 20rem;
+        font-size: 15em;
     }
 }
 /*@end font xl*/

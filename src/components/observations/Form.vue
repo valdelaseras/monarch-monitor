@@ -9,18 +9,19 @@
       <div class="column two">
         <div class="content">
           <form class="form">
-<!--            @TODO: datepicker-->
-<!--            <div class="form-group">-->
-<!--            </div>-->
-<!--        @TODO: some events should be disabled based on the selection of 'stage'-->
+            <!--            @TODO: datepicker-->
+            <!--            <div class="form-group">-->
+            <!--            </div>-->
+            <!--        @TODO: some events should be disabled based on the selection of 'stage'-->
             <fieldset class="fieldset">
               <legend>Current stage the organism</legend>
               <select id="stage">
                 <option
-                  v-for="stageOption in stageOptions"
-                  :value="stageOption.value"
+                  v-for="option in stageOptions"
+                  :key="option.label"
+                  :value="option.value"
                 >
-                  {{ stageOption.label }}
+                  {{ option.label }}
                 </option>
               </select>
             </fieldset>
@@ -28,10 +29,11 @@
               <legend>Event</legend>
               <select id="event">
                 <option
-                  v-for="eventOption in eventOptions"
-                  :value="eventOption.value"
+                  v-for="option in eventOptions"
+                  :key="option.label"
+                  :value="option.value"
                 >
-                  {{ eventOption.label }}
+                  {{ option.label }}
                 </option>
               </select>
             </fieldset>
@@ -94,16 +96,18 @@
 </template>
 
 <script lang="ts">
-import { ObservationEvent, Stage } from "@/domain/observation";
+import { ObservationEvent } from "@/domain/observation-event.enum";
+import { Stage } from "@/domain/stage.enum";
 
 interface IOption {
   value: string;
   label: string;
 }
 
-function enumToOptions(enumerator: {
-  [key: string]: string;
-}): IOption[] {
+// Create a { label, value } object array of an enum with string values,
+// so we don't have to manually update the template whenever a new prop
+// gets added to the enums
+function enumToOptions(enumerator: { [key: string]: string }): IOption[] {
   return Object.values(enumerator).map((value: string) => ({
     value,
     label: value.charAt(0).toUpperCase() + value.slice(1),

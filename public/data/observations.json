@@ -75,5 +75,60 @@
     "note": "lorem ipsum",
     "sex": "male",
     "alive": "true"
+  },
+  {
+    "id": "7",
+    "event": "released",
+    "species": "danaus chrysippus",
+    "location": "Roseneath, Wellington, NZ",
+    "datetime": 1671414890536,
+    "stage": "adult",
+    "note": "lorem ipsum",
+    "sex": "male",
+    "alive": "true"
+  },
+  {
+    "id": "8",
+    "event": "molting",
+    "species": "danaus chrysippus",
+    "location": "Roseneath, Wellington, NZ",
+    "datetime": 1671414890536,
+    "stage": "third instar",
+    "note": "lorem ipsum",
+    "sex": "undetermined",
+    "alive": "true"
+  }
+  ,{
+    "id": "9",
+    "event": "molting",
+    "species": "danaus chrysippus",
+    "location": "Roseneath, Wellington, NZ",
+    "datetime": 1671414890536,
+    "stage": "fourth instar",
+    "note": "lorem ipsum",
+    "sex": "undetermined",
+    "alive": "true"
+  },
+  {
+    "id": "10",
+    "event": "molting",
+    "species": "danaus chrysippus",
+    "location": "Roseneath, Wellington, NZ",
+    "datetime": 1671414890536,
+    "stage": "third instar",
+    "note": "lorem ipsum",
+    "sex": "undetermined",
+    "alive": "true"
+  },
+  {
+    "id": "11",
+    "event": "molting",
+    "species": "danaus chrysippus",
+    "location": "Roseneath, Wellington, NZ",
+    "datetime": 1671414890536,
+    "stage": "second instar",
+    "note": "lorem ipsum",
+    "sex": "undetermined",
+    "alive": "true"
   }
 ]

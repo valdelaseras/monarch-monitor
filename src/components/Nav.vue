@@ -14,27 +14,17 @@
     </div>
     <div class="column">
       <div class="content">
-        <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
-        <label for="menu-checkbox" class="nav-toggle" id="nav-toggle">
+        <input type="checkbox" id="menu-checkbox" class="menu-checkbox" />
+        <label for="menu-checkbox" class="menu-toggle" id="menu-toggle">
           <span class="top-line"></span>
           <span class="middle-line"></span>
           <span class="bottom-line"></span>
         </label>
         <ul class="primary-nav-list" id="nav-list">
-          <li>
-            <RouterLink
-              class="primary-nav-link"
-              :to="{ path: '/observations/new' }"
-            >
-              Add new
-            </RouterLink>
-          </li>
-          <li>
-            <RouterLink
-              class="primary-nav-link"
-              :to="{ path: '/observations' }"
-            >
-              See all
+          <li v-for="link in links" :key="link.title">
+<!--        @TODO: active class-->
+            <RouterLink class="primary-nav-link" :to="link.path">
+              {{ link.title }}
             </RouterLink>
           </li>
         </ul>
@@ -46,6 +36,15 @@
 <script>
 export default {
   name: "CNav",
+  data() {
+    return {
+      links: [
+        { title: "Add new", path: "/observations/new" },
+        { title: "See all", path: "/observations" },
+        { title: "About momo", path: "/about" },
+      ],
+    };
+  },
 };
 </script>
 
@@ -90,7 +89,7 @@ $nav-height: 60px;
 }
 /*@end nav branding logo*/
 
-/*@start primary nav list + li + a*/
+/*@start primary nav list*/
 .primary-nav-list {
   position: absolute;
   top: 0;
@@ -122,7 +121,7 @@ $nav-height: 60px;
 /*@end primary nav list*/
 
 /*@start primary nav list li*/
-.primary-nav-list > li:not(:last-child){
+.primary-nav-list > li:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
@@ -130,7 +129,7 @@ $nav-height: 60px;
   margin-top: $nav-height;
 }
 
-@media only screen and ( min-width: variables.$break-point ){
+@media only screen and (min-width: variables.$break-point) {
   .primary-nav-list > li {
     display: inline-block;
   }
@@ -150,23 +149,30 @@ $nav-height: 60px;
 }
 /*@end primary nav list li*/
 
-/*@start primary nav list li link*/
+/*@start primary nav link*/
 .primary-nav-link {
   font-size: 1.5rem;
   padding-left: variables.$default-padding;
 }
 
-@media only screen and (min-width: variables.$break-point ){
+@media only screen and (min-width: variables.$break-point) {
   .primary-nav-link {
     font-size: 1rem;
     padding-left: 0;
     font-weight: 100;
   }
 }
-/*@end primary nav list li link*/
+/*@end primary nav link*/
 
-/* @start nav toggle */
-.nav-toggle {
+/*@start menu checkbox*/
+// hide the actual input[type="checkbox"] element
+.menu-checkbox {
+  display: none;
+}
+/*@end menu checkbox*/
+
+/* @start menu toggle */
+.menu-toggle {
   display: block;
   width: 30px;
   height: 30px;
@@ -177,7 +183,8 @@ $nav-height: 60px;
   z-index: 100;
 }
 
-.nav-toggle > span {
+// the lines that make up the hamburger
+.menu-toggle > span {
   width: 30px;
   height: 2px;
   background: var(--primary-font-color);
@@ -199,16 +206,18 @@ $nav-height: 60px;
   transition: transform 400ms;
 }
 
+// hide the collapsable menu checkbox and the custom menu-toggle at breakpoint
 @media only screen and (min-width: variables.$break-point) {
   .menu-checkbox,
-  .nav-toggle {
+  .menu-toggle {
     display: none;
   }
 }
-/* @end nav toggle */
+/* @end menu toggle */
 
-/*@start nav toggle on check/uncheck transform*/
-.menu-checkbox:checked + .nav-toggle .top-line {
+/*@start menu toggle on check/uncheck transform*/
+// rotate the top and bottom line to form a 'X'
+.menu-checkbox:checked + .menu-toggle .top-line {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -217,17 +226,18 @@ $nav-height: 60px;
   transform-origin: 94% 6%;
 }
 
+// fade out the middle line
 .middle-line {
   opacity: 1;
   transition: 0.5s;
 }
 
-.menu-checkbox:checked + .nav-toggle .middle-line {
+.menu-checkbox:checked + .menu-toggle .middle-line {
   opacity: 0;
   transition: 200ms;
 }
 
-.menu-checkbox:checked + .nav-toggle .bottom-line {
+.menu-checkbox:checked + .menu-toggle .bottom-line {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -236,10 +246,4 @@ $nav-height: 60px;
   transform-origin: 100%;
 }
 /*@end nav toggle on check/uncheck transform*/
-
-/*@start menu checkbox*/
-.menu-checkbox {
-  display: none;
-}
-/*@end menu checkbox*/
 </style>

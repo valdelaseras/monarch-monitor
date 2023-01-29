@@ -9,5 +9,12 @@
     --primary-font-color: var(--primary-color);
     --secondary-font-color: var(--secondary-color);
     --tertiary-font-color: var(--tertiary-color);
+
+    --primary-accent-font-color: var(--primary-accent-color);
+    --secondary-accent-font-color: var(--secondary-accent-color);
+
+    body {
+        background-color: var(--tertiary-color);
+    }
 }
 

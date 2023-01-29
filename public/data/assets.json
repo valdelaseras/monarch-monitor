@@ -1,46 +1,46 @@
 [
   {
-    "stage": "egg",
+    "label": "egg",
     "alt": "Image of a monarch butterfly egg",
     "src": "http://3.bp.blogspot.com/-XrGPwigr8-0/UbDoz1pXviI/AAAAAAAAAkQ/k5zj9pvzWDY/s640/Monarch+Egg+1.jpg"
   },
   {
-    "stage": "first instar",
+    "label": "first instar",
     "alt": "Image of a first instar monarch butterfly",
     "src": "http://3.bp.blogspot.com/-FtGwpoj654c/UbY-ZsKDy1I/AAAAAAAAAmA/bTfDaDzvd1E/s1600/Number+8.jpg"
   },
   {
-    "stage": "second instar",
+    "label": "second instar",
     "alt": "Image of a second instar monarch butterfly",
     "src": "https://www.monarchmilkweedmapper.org/wp-content/uploads/2016/07/4676275025_a7038c6b28_o-768x576.jpg"
   },
   {
-    "stage": "third instar",
+    "label": "third instar",
     "alt": "Image of a third instar monarch butterfly",
     "src": "https://www.monarchmilkweedmapper.org/wp-content/uploads/2016/07/Monarch-3rd-Instar-Stephanie-Mcknight-e1477524831998.jpg"
   },
   {
-    "stage": "fourth instar",
+    "label": "fourth instar",
     "alt": "Image of a fourth instar monarch butterfly",
     "src": "https://www.monarchmilkweedmapper.org/wp-content/uploads/2016/07/4th-instar-LemhiCo-ID-BWaterbury.jpg"
   },
   {
-    "stage": "fifth instar",
+    "label": "fifth instar",
     "alt": "Image of a fifth instar monarch butterfly",
     "src": "https://www.monarchmilkweedmapper.org/wp-content/uploads/2016/07/5th-instar-ButteCo-ID-BWaterbury.jpg"
   },
   {
-    "stage": "J hanging",
+    "label": "J hanging",
     "alt": "Image of a J hanging monarch butterfly",
     "src": "http://monarchprojects.com/wp-content/uploads/2015/04/larva-J1.jpg"
   },
   {
-    "stage": "pupa",
+    "label": "pupa",
     "alt": "Image of a monarch pupa",
     "src": "https://cdn.shopify.com/s/files/1/0282/2071/9139/products/MonarchChrysalis_1024x1024@2x.png?v=1615554754"
   },
   {
-    "stage": "adult",
+    "label": "adult",
     "alt": "Image of an adult monarch butterfly",
     "src": "http://2.bp.blogspot.com/-o6w6M9-a3Fc/UbDo3u4nJII/AAAAAAAAAkY/Ya0Jd4oVQuc/s1600/Monarch+Egg+6.jpg"
   }

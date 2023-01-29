@@ -6,13 +6,36 @@
       </div>
     </div>
     <div class="column">
-      <div
-        class="column three"
-        v-for="observation in observations"
-        :key="observation.id"
-      >
+      <div class="column">
         <div class="content">
-          <CCard v-bind="observation" />
+          <div class="flex space-between align-items-center">
+            <div>
+              <p>
+                Total observations:
+                <span class="font-extra-bold">{{ observations.length }}</span>
+              </p>
+            </div>
+            <div>
+              <RouterLink
+                to="/observations/new"
+                class="btn btn-primary"
+                role="button"
+              >
+                Add new
+              </RouterLink>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div
+          class="column three"
+          v-for="observation in observations"
+          :key="observation.id"
+        >
+          <div class="content">
+            <CCard v-bind="observation" />
+          </div>
         </div>
       </div>
     </div>
@@ -21,7 +44,7 @@
 
 <script lang="ts">
 import CCard from "@/components/observations/Card.vue";
-import { ObservationService } from "@/services/observation.service";
+import { ObservationListItemService } from "@/services/observation-list-item.service";
 
 export default {
   name: "COverview",
@@ -33,9 +56,11 @@ export default {
   },
   methods: {
     getObservations() {
-      ObservationService.getObservations().then((observations) => {
-        this.observations = observations;
-      });
+      ObservationListItemService.getObservationListItems().then(
+        (observations) => {
+          this.observations = observations;
+        }
+      );
     },
   },
   mounted() {

@@ -1,16 +1,17 @@
 <template>
-  <RouterLink :to="{ path: `/observations/${id}` }">
-    <a class="card theme-secondary">
-      <header class="card-header">
-        <h4>{{ stage }}</h4>
-      </header>
-      <div class="card-body">
-        <img class="card-image" src="{{ src }}" alt="{{ alt }}" />
-      </div>
-      <footer class="card-footer">
-        <p>{{ location }}</p>
-      </footer>
-    </a>
+  <RouterLink
+    :to="{ path: `/observations/${id}` }"
+    class="card theme-secondary"
+  >
+    <header class="card-header">
+      <h4>{{ stage }}</h4>
+    </header>
+    <div class="card-body">
+      <img class="card-image" :src="src" :alt="alt" />
+    </div>
+    <footer class="card-footer">
+      <p>{{ location }}</p>
+    </footer>
   </RouterLink>
 </template>
 
@@ -34,12 +35,20 @@ export default {
 .card {
   display: inline-block;
   width: 100%;
+  transition: background-color 100ms ease-in-out;
+  h4,
+  p {
+    color: var(--tertiary-font-color);
+  }
+}
+
+.card:hover {
+  background-color: var(--primary-accent-color);
 }
 /*@end card*/
 
 /*@start
 card-header,
-card-body,
 card-footer*/
 .card-header,
 .card-footer {
@@ -47,8 +56,16 @@ card-footer*/
 }
 /*@end
 card-header,
-card-body,
 card-footer*/
+
+/*@start card-body*/
+.card-body {
+  box-sizing: border-box;
+  height: 300px;
+  max-height: 300px;
+  overflow: hidden;
+}
+/*@end card-body*/
 
 /*@start card-image*/
 .card-image {

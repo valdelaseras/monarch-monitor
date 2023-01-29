@@ -10,8 +10,20 @@
 }
 /*@end flex column*/
 
-/*@start flex space-around*/
+/*@start space-around*/
 .space-around {
     justify-content: space-around;
 }
-/*@end flex space-around*/
+/*@end space-around*/
+
+/*@start space between*/
+.space-between {
+    justify-content: space-between;
+}
+/*@end space between*/
+
+/*@start align items center*/
+.align-items-center {
+    align-items: center;
+}
+/*@end align items center*/

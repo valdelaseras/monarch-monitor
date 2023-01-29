@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section theme-primary">
     <div class="grid">
       <div class="column">
         <div class="column">

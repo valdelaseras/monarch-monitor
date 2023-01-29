@@ -16,29 +16,8 @@
         <div class="column three">
           <div class="content">
             <ul class="compact-list">
-              <li>
-                <p>Vue 3</p>
-              </li>
-              <li>
-                <p>Vue Router</p>
-              </li>
-              <li>
-                <p>TypeScript</p>
-              </li>
-              <li>
-                <p>PWA</p>
-              </li>
-              <li>
-                <p>Axios</p>
-              </li>
-              <li>
-                <p>Vitest</p>
-              </li>
-              <li>
-                <p>SCSS</p>
-              </li>
-              <li>
-                <p>Git</p>
+              <li v-for="tool in tools" :key="tool">
+                <p>{{ tool }}</p>
               </li>
             </ul>
           </div>
@@ -46,25 +25,14 @@
         <div class="column three">
           <div class="content">
             <ul class="footer-link-list">
-              <li>
-                <RouterLink class="footer-link" to="/about">
-                  About MoMo
+              <li v-for="link in routerLinks" :key="link.title">
+                <RouterLink class="footer-link" :to="link.path">
+                  {{ link.title }}
                 </RouterLink>
               </li>
-              <li>
-                <a
-                  class="footer-link"
-                  href="https://github.com/valdelaseras/monarch-monitor"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  class="footer-link"
-                  href="https://www.linkedin.com/in/robin-scholtes-488964115/"
-                >
-                  LinkedIn
+              <li v-for="link in externalLinks" :key="link.title">
+                <a class="footer-link" target="_blank" v-bind:href="link.href">
+                  {{ link.title }}
                 </a>
               </li>
             </ul>
@@ -78,6 +46,30 @@
 <script>
 export default {
   name: "CFooter",
+  data() {
+    return {
+      routerLinks: [{ title: "About MoMo", path: "/about" }],
+      externalLinks: [
+        {
+          title: "GitHub",
+          href: "https://github.com/valdelaseras/monarch-monitor",
+        },
+        {
+          title: "LinkedIn",
+          href: "https://www.linkedin.com/in/robin-scholtes-488964115",
+        },
+      ],
+      tools: [
+        "Vue 3",
+        "Vue Router",
+        "TypeScript",
+        "Axios",
+        "Vitest",
+        "SCSS",
+        "Git",
+      ],
+    };
+  },
 };
 </script>
 
@@ -92,7 +84,8 @@ export default {
   position: relative;
   bottom: 0;
   padding: variables.$vertical-spacing;
-  z-index: -10; // ensure mobile menu lays over the footer
+  //@TODO: footer is laid on top of nav due to element order. Using z-index -10 prevents the footer ( links ) from being
+  //clicked on
 }
 /*@end footer*/
 

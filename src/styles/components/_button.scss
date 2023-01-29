@@ -1,0 +1,43 @@
+@use "/src/styles/variables";
+
+/*@start btn*/
+.btn {
+    text-transform: uppercase;
+    padding: 5px variables.$default-padding;
+    border-radius: variables.$border-radius-xs;
+    transition: background-color 100ms ease-in-out;
+    border-width: 2px;
+    border-style: solid;
+}
+/*@end btn*/
+
+/*@start btn-primary*/
+.btn.btn-primary {
+    color: var(--tertiary-font-color);
+    background-color: var(--primary-accent-color);
+    border-color: var(--primary-accent-color);
+}
+
+.btn.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-accent-font-color);
+}
+/*@end btn-primary*/
+
+/*@start btn-secondary*/
+.btn.btn-secondary {
+    color: var(--tertiary-font-color);
+    background-color: var(--secondary-accent-color);
+    border-color: var(--secondary-accent-color);
+}
+
+.btn.btn-secondary:hover {
+    background-color: transparent;
+    color: var(--secondary-accent-font-color);
+}
+/*@end btn-secondary*/
+
+//TODO: btn-compact, btn-wide, btn-icon, btn-group
+
+
+

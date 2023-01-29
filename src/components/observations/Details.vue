@@ -2,24 +2,28 @@
   <div class="column">
     <div class="column">
       <div class="content">
-        <h3>Observation {{ observation?.id }}</h3>
+        <h3>Observation {{ observationListItem?.id }}</h3>
       </div>
     </div>
     <div class="column">
-      <div class="column phi b">
+      <div class="column phi a">
         <div class="content">
           <ul>
-            <li v-for="(value, key) in observation">
+            <li :key="property.key" v-for="property of observationDetails">
               <p>
-                <span class="font-extra-bold">{{ key }}:</span> {{ value }}
+                <span class="font-extra-bold">{{ property.key }}:</span>
+                {{ property.value }}
               </p>
             </li>
           </ul>
         </div>
       </div>
-      <div class="column phi a">
+      <div class="column phi b">
         <div class="content">
-          <img src="{{ observation?.src }}" alt="{{ observation?.alt }}" />
+          <img
+            :src="observationListItem?.src"
+            :alt="observationListItem?.alt"
+          />
         </div>
       </div>
     </div>
@@ -27,31 +31,51 @@
 </template>
 
 <script lang="ts">
-import type { IObservation } from "@/domain/observation";
 import { useRoute } from "vue-router";
-import { ObservationService } from "@/services/observation.service";
+import type {IObservationListItem} from "@/domain/observation.interface";
+import { ObservationListItemService } from "@/services/observation-list-item.service";
 
 interface ICDetailsData {
-  observation: IObservation | undefined;
+  observation: IObservationListItem | undefined;
 }
 
 export default {
   name: "CDetails",
   data(): ICDetailsData {
     return {
-      observation: undefined,
+      observationListItem: undefined,
     };
   },
   methods: {
-    getObservation(id: string) {
-      ObservationService.getObservationById(id).then(
-        (observation) => (this.observation = observation)
+    getObservationListItem(id: string) {
+      ObservationListItemService.getObservationListItemById(id).then(
+        (observationListItem) =>
+          (this.observationListItem = observationListItem)
       );
+    },
+  },
+  computed: {
+    observationDetails() {
+      if (!this.observationListItem) return [];
+      return Object.keys(this.observationListItem)
+        .filter((key) => key !== "src" && key !== "alt")
+        .map((key) => ({
+          key,
+          value: this.observationListItem[key],
+        }));
     },
   },
   mounted() {
     const route = useRoute();
-    this.getObservation(route.params.id);
+    this.getObservationListItem(route.params.id);
   },
 };
 </script>
+
+<style lang="scss">
+/*@start img*/
+img {
+  width: 100%;
+}
+/*@end img*/
+</style>
