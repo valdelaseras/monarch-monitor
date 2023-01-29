@@ -9,10 +9,10 @@
       <div class="column phi a">
         <div class="content">
           <ul>
-            <li :key="property.key" v-for="property of observationDetails">
+            <li :key="data.key" v-for="data of observationData">
               <p>
-                <span class="font-extra-bold">{{ property.key }}:</span>
-                {{ property.value }}
+                <span class="font-extra-bold">{{ data.key }}:</span>
+                {{ data.value }}
               </p>
             </li>
           </ul>
@@ -54,7 +54,7 @@ export default {
   computed: {
     // to display the key / values of every prop in an observation: IObservationListItem,
     // in a list, except for the src and alt props
-    observationDetails() {
+    observationData() {
       if (!this.observationListItem) return [];
       return Object.keys(this.observationListItem)
         .filter((key) => key !== "src" && key !== "alt")
