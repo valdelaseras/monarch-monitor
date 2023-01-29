@@ -46,26 +46,31 @@
 <script lang="ts">
 import ObservationCard from "@/components/observations/ObservationCard.vue";
 import { ObservationListItemService } from "@/services/observation-list-item.service";
+import { useObservationsStore } from "@/store/observations";
+import { onMounted } from "vue";
+import { storeToRefs } from "pinia";
 
 export default {
   name: "ObservationsOverview",
   components: { ObservationCard },
-  data() {
-    return {
-      observations: [],
-    };
-  },
-  methods: {
-    getObservations() {
-      ObservationListItemService.getObservationListItems().then(
-        (observations) => {
-          this.observations = observations;
-        }
+  setup() {
+    const store = useObservationsStore();
+    const { observations } = storeToRefs(store);
+    const { setObservations } = store;
+
+    const getObservations = () => {
+      ObservationListItemService.getObservationListItems().then((result) =>
+        setObservations(result)
       );
-    },
-  },
-  mounted() {
-    this.getObservations();
+    };
+
+    onMounted(() => {
+      getObservations();
+    });
+
+    return {
+      observations,
+    };
   },
 };
 </script>
