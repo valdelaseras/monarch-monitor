@@ -32,7 +32,12 @@
                 </RouterLink>
               </li>
               <li v-for="link in externalLinks" :key="link.title">
-                <a class="footer-link" tabindex="0" target="_blank" v-bind:href="link.href">
+                <a
+                  class="footer-link"
+                  tabindex="0"
+                  target="_blank"
+                  v-bind:href="link.href"
+                >
                   {{ link.title }}
                 </a>
               </li>
