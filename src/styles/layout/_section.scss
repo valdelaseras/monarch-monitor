@@ -2,6 +2,8 @@
 
 /*@start section*/
 .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: auto;
     padding: variables.$vertical-spacing;

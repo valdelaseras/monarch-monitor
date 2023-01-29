@@ -13,7 +13,12 @@ $nav-height: 60px;
 
 /*@start nav-branding*/
 .nav-branding {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: variables.$default-padding;
 }
@@ -33,6 +38,8 @@ $nav-height: 60px;
 .nav-branding-logo {
     display: inline-block;
     height: 2.5rem;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
     transform: translateY(-10px);
     width: auto;
 }
@@ -46,6 +53,8 @@ $nav-height: 60px;
     left: -100%;
     width: 100vw;
     height: 100vh;
+    -webkit-transition: variables.$default-transition;
+    -o-transition: variables.$default-transition;
     transition: variables.$default-transition;
     background-color: var(--tertiary-color);
     text-align: left;
@@ -154,9 +163,11 @@ $nav-height: 60px;
     -ms-transform-origin: 94% 6%;
     transform-origin: 94% 6%;
     -webkit-transition: transform 400ms;
-    -moz-transition: transform 400ms;
     -o-transition: transform 400ms;
+    -webkit-transition: -webkit-transform 400ms;
+    transition: -webkit-transform 400ms;
     transition: transform 400ms;
+    transition: transform 400ms, -webkit-transform 400ms;
 }
 
 // hide the collapsable menu checkbox and the custom menu-toggle at breakpoint
@@ -182,11 +193,15 @@ $nav-height: 60px;
 // fade out the middle line
 .middle-line {
     opacity: 1;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
 .menu-checkbox:checked + .menu-toggle .middle-line {
     opacity: 0;
+    -webkit-transition: 200ms;
+    -o-transition: 200ms;
     transition: 200ms;
 }
 

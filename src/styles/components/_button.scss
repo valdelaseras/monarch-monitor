@@ -6,6 +6,8 @@
     text-transform: uppercase;
     padding: 5px variables.$default-padding;
     border-radius: variables.$border-radius-xs;
+    -webkit-transition: background-color variables.$default-transition;
+    -o-transition: background-color variables.$default-transition;
     transition: background-color variables.$default-transition;
     border-width: 2px;
     border-style: solid;
