@@ -32,7 +32,7 @@
 
 <script lang="ts">
 import { useRoute } from "vue-router";
-import type {IObservationListItem} from "@/domain/observation.interface";
+import type { IObservationListItem } from "@/domain/observation.interface";
 import { ObservationListItemService } from "@/services/observation-list-item.service";
 
 interface ICDetailsData {
