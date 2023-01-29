@@ -7,4 +7,9 @@ export const AssetsService = {
       .get<IAsset[]>("/data/assets.json")
       .then((response) => response.data);
   },
+  getAssetByLabel: (label: string): Promise<IAsset> => {
+    return AssetsService.getAssets().then(
+      (assets: IAsset[]) => assets.find((asset) => asset.label === label)!
+    );
+  },
 };

@@ -11,7 +11,9 @@
             class="nav-branding-logo"
             alt="icon of a butterfly"
           />
-          <RouterLink class="nav-branding-typography" to="/" tabindex="0">MoMo</RouterLink>
+          <RouterLink class="nav-branding-typography" to="/" tabindex="0"
+            >MoMo</RouterLink
+          >
         </div>
       </div>
     </div>
@@ -23,7 +25,7 @@
           class="menu-checkbox"
           tabindex="0"
         />
-<!--        @TODO: open menu on enter key-->
+        <!--        @TODO: open menu on enter key-->
         <label
           for="menu-checkbox"
           class="menu-toggle"
