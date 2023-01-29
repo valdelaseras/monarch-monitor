@@ -52,8 +52,8 @@
               </p>
               <p>
                 Manually writing these notes is kind of annoying and so I've
-                wanted to create this simple app for a while now, so I took this
-                opportunity to just get started on it :)
+                wanted to create this simple app for a while now. Thus I took
+                this opportunity to just get started on it :)
               </p>
             </div>
             <div class="content">
