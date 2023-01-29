@@ -2,7 +2,7 @@
   <fieldset class="fieldset">
     <legend>{{ legend }}</legend>
     <div class="flex flex-column">
-      <div v-for="option in options" :key="option.label">
+      <div v-for="option in options" :key="option.label" tabindex="0">
         <label :for="option.value">
           <input
             type="radio"

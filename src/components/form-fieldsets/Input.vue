@@ -2,7 +2,7 @@
   <fieldset class="fieldset">
     <legend>{{ legend }}</legend>
     <label :for="id">{{ label }}</label>
-    <input :type="type" :id="id" />
+    <input tabindex="0" :type="type" :id="id" />
   </fieldset>
 </template>
 

@@ -3,6 +3,7 @@
     <legend>{{ legend }}</legend>
     <select :id="id">
       <option
+        tabindex="0"
         v-for="option in options"
         :key="option.label"
         :value="option.value"

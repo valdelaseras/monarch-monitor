@@ -1,6 +1,7 @@
 <!--@TODO: turn into a generic card component-->
 <template>
   <RouterLink
+    tabindex="0"
     :to="{ path: `/observations/${id}` }"
     class="card theme-secondary"
   >

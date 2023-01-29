@@ -27,12 +27,12 @@
           <div class="content">
             <ul class="footer-link-list">
               <li v-for="link in routerLinks" :key="link.title">
-                <RouterLink class="footer-link" :to="link.path">
+                <RouterLink tabindex="0" class="footer-link" :to="link.path">
                   {{ link.title }}
                 </RouterLink>
               </li>
               <li v-for="link in externalLinks" :key="link.title">
-                <a class="footer-link" target="_blank" v-bind:href="link.href">
+                <a class="footer-link" tabindex="0" target="_blank" v-bind:href="link.href">
                   {{ link.title }}
                 </a>
               </li>

@@ -113,6 +113,9 @@ $nav-height: 60px;
     padding-left: variables.$default-padding;
 }
 
+.primary-nav-link:hover,
+.primary-nav-link:active,
+.primary-nav-link:focus,
 .primary-nav-link.router-link-exact-active {
     color: var(--primary-accent-color);
 }

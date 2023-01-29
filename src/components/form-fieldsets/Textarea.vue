@@ -2,7 +2,7 @@
   <fieldset class="fieldset">
     <legend>{{ legend }}</legend>
     <label :for="id">{{ label }}</label>
-    <textarea :id="id"></textarea>
+    <textarea :id="id" tabindex="0"></textarea>
   </fieldset>
 </template>
 

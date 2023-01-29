@@ -21,6 +21,8 @@
     border-color: var(--primary-accent-color);
 }
 
+.btn.btn-primary:active,
+.btn.btn-primary:focus,
 .btn.btn-primary:hover {
     background-color: transparent;
     color: var(--primary-accent-font-color);
@@ -34,6 +36,8 @@
     border-color: var(--secondary-accent-color);
 }
 
+.btn.btn-secondary:active,
+.btn.btn-secondary:focus,
 .btn.btn-secondary:hover {
     background-color: transparent;
     color: var(--secondary-accent-font-color);

@@ -17,6 +17,7 @@
             </div>
             <div>
               <RouterLink
+                tabindex="0"
                 to="/observations/new"
                 class="btn btn-primary"
                 role="button"

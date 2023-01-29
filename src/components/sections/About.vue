@@ -32,6 +32,7 @@
               <ul class="btn-group">
                 <li v-for="link in externalLinks" :key="link.title">
                   <a
+                    tabindex="0"
                     class="btn btn-primary btn-compact"
                     target="_blank"
                     v-bind:href="link.href"
@@ -60,6 +61,7 @@
               <ul class="btn-group">
                 <li v-for="link in routerLinks" :key="link.title">
                   <RouterLink
+                    tabindex="0"
                     class="btn btn-primary btn-compact"
                     :to="link.path"
                   >

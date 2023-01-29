@@ -23,6 +23,9 @@
     text-transform: uppercase;
 }
 
+.footer-link:hover,
+.footer-link:active,
+.footer-link:focus,
 .footer-link.router-link-exact-active {
     color: var(--primary-accent-color);
 }

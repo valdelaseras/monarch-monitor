@@ -2,7 +2,7 @@
   <fieldset class="fieldset">
     <legend>{{ legend }}</legend>
     <label :for="id">
-      <input type="checkbox" :id="id" :checked="true" />
+      <input tabindex="0" type="checkbox" :id="id" :checked="true" />
       {{ label }}
     </label>
   </fieldset>

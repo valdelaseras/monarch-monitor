@@ -11,7 +11,7 @@
             class="nav-branding-logo"
             alt="icon of a butterfly"
           />
-          <RouterLink class="nav-branding-typography" to="/">MoMo</RouterLink>
+          <RouterLink class="nav-branding-typography" to="/" tabindex="0">MoMo</RouterLink>
         </div>
       </div>
     </div>
@@ -21,8 +21,15 @@
           type="checkbox"
           id="menu-checkbox"
           class="menu-checkbox"
+          tabindex="0"
         />
-        <label for="menu-checkbox" class="menu-toggle" id="menu-toggle">
+<!--        @TODO: open menu on enter key-->
+        <label
+          for="menu-checkbox"
+          class="menu-toggle"
+          id="menu-toggle"
+          tabindex="0"
+        >
           <span class="top-line"></span>
           <span class="middle-line"></span>
           <span class="bottom-line"></span>
@@ -30,6 +37,7 @@
         <ul class="primary-nav-list" id="nav-list" role="menu">
           <li v-for="link in links" :key="link.title" role="menuitem">
             <RouterLink
+              tabindex="0"
               @click="onClick"
               class="primary-nav-link"
               :to="link.path"
