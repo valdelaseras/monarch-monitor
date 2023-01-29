@@ -20,6 +20,7 @@
                 <p>{{ tool }}</p>
               </li>
             </ul>
+            <small class="font-extra-bold">* WIP</small>
           </div>
         </div>
         <div class="column three">
@@ -62,15 +63,15 @@ export default {
       tools: [
         "Vue 3",
         "Vue Router",
-        "Vue Datepicker",
         "TypeScript",
-        "PWA",
-        "Axios",
-        "Pinia",
-        "Vitest",
-        "PlayWright",
         "SCSS",
         "Git",
+        "Axios",
+        "PWA *",
+        "Pinia *",
+        "Vitest *",
+        "PlayWright *",
+        "Vue Datepicker *",
       ],
     };
   },
