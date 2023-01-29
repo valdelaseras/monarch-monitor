@@ -9,7 +9,7 @@
     <div class="column">
       <div class="column two">
         <div class="content">
-          <form class="form">
+          <form class="form" role="form" aria-label="Add new observation form">
             <!--            <fieldset class="fieldset">-->
             <!--              <legend>Date</legend>-->
             <!--              <Datepicker v-model="date" utc></Datepicker>-->

@@ -5,7 +5,7 @@ import CFooter from "@/components/Footer.vue";
 </script>
 
 <template>
-  <header>
+  <header role="banner">
     <c-nav />
   </header>
   <main class="main">

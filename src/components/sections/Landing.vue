@@ -1,5 +1,5 @@
 <template>
-  <section class="section theme-primary">
+  <section class="section theme-primary" role="region">
     <div class="grid">
       <div class="column">
         <div class="content">

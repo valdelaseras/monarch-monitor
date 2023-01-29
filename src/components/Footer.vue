@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer theme-secondary">
+  <footer class="footer theme-secondary" role="contentinfo">
     <div class="grid">
       <div class="column">
         <div class="column three">

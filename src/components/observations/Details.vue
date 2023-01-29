@@ -8,8 +8,8 @@
     <div class="column">
       <div class="column phi a">
         <div class="content">
-          <ul>
-            <li :key="property.key" v-for="property of observationDetails">
+          <ul role="list">
+            <li :key="property.key" v-for="property of observationDetails" role="listitem">
               <p>
                 <span class="font-extra-bold">{{ property.key }}:</span>
                 {{ property.value }}
@@ -21,6 +21,8 @@
       <div class="column phi b">
         <div class="content">
           <img
+            role="img"
+            :aria-label="observationListItem?.alt"
             :src="observationListItem?.src"
             :alt="observationListItem?.alt"
           />

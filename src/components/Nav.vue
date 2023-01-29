@@ -1,9 +1,11 @@
 <template>
-  <nav class="nav theme-primary">
+  <nav class="nav theme-primary" role="navigation">
     <div class="column">
       <div class="content">
         <div class="nav-branding">
           <img
+            role="img"
+            aria-label="icon of a butterfly"
             src="/img/logo/butterfly.svg"
             class="nav-branding-logo"
             alt="icon of a butterfly"
@@ -20,9 +22,9 @@
           <span class="middle-line"></span>
           <span class="bottom-line"></span>
         </label>
-        <ul class="primary-nav-list" id="nav-list">
+        <ul class="primary-nav-list" id="nav-list" role="menu">
           <li v-for="link in links" :key="link.title">
-            <RouterLink class="primary-nav-link" :to="link.path">
+            <RouterLink class="primary-nav-link" :to="link.path" role="menuitem">
               {{ link.title }}
             </RouterLink>
           </li>

@@ -7,7 +7,13 @@
       <h4>{{ stage }}</h4>
     </header>
     <div class="card-body">
-      <img class="card-image" :src="src" :alt="alt" />
+      <img
+        class="card-image"
+        :src="src"
+        :alt="alt"
+        role="img"
+        :aria-label="alt"
+      />
     </div>
     <footer class="card-footer">
       <p>{{ location }}</p>
