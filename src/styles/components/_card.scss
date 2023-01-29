@@ -1,0 +1,45 @@
+@use "/src/styles/variables";
+
+/*@start card*/
+.card {
+    display: inline-block;
+    width: 100%;
+    transition: background-color variables.$default-transition;
+
+    h4,
+    p {
+        color: var(--tertiary-font-color);
+    }
+}
+
+.card:hover {
+    background-color: var(--primary-accent-color);
+}
+/*@end card*/
+
+/*@start
+card-header,
+card-footer*/
+.card-header,
+.card-footer {
+    padding: 10px variables.$default-padding;
+}
+/*@end
+card-header,
+card-footer*/
+
+/*@start card-body*/
+.card-body {
+    box-sizing: border-box;
+    height: 300px;
+    max-height: 300px;
+    overflow: hidden;
+}
+/*@end card-body*/
+
+/*@start card-image*/
+.card-image {
+    width: 100%;
+    height: auto;
+}
+/*@end card-image*/

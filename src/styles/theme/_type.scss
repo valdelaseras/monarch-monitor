@@ -56,7 +56,7 @@ a {
     color: var(--secondary-font-color);
     text-decoration: none;
     text-transform: uppercase;
-    transition: color 150ms;
+    transition: color variables.$default-transition;
 }
 /*@end a*/
 
@@ -64,7 +64,7 @@ a {
 .font-light { font-weight: 300; }
 .font-regular { font-weight: 400; }
 .font-medium { font-weight: 500; }
-.font-semiBold { font-weight: 600; }
+.font-semi-bold { font-weight: 600; }
 .font-bold { font-weight: 700; }
 .font-extra-bold { font-weight: 800; }
 .font-black { font-weight: 900; }

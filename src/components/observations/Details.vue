@@ -55,6 +55,8 @@ export default {
     },
   },
   computed: {
+    // to display the key / values of every prop in an observation: IObservationListItem,
+    // except the src and alt
     observationDetails() {
       if (!this.observationListItem) return [];
       return Object.keys(this.observationListItem)

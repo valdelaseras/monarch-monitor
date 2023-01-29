@@ -1,0 +1,29 @@
+@use "/src/styles/variables";
+
+/*@start footer*/
+.footer {
+    display: flow-root;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    padding: variables.$vertical-spacing;
+    //@TODO: footer is laid on top of nav due to element order. Using z-index -10
+    // prevents the footer ( links ) from being clicked on
+}
+/*@end footer*/
+
+/*@start footer link list + link*/
+.footer-link-list > li:not(:last-child) {
+    padding-bottom: variables.$default-padding;
+}
+
+.footer-link {
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.footer-link.router-link-exact-active {
+    color: var(--primary-accent-color);
+}
+/*@end footer link list + link*/

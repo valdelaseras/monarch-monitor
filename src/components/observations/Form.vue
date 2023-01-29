@@ -1,3 +1,4 @@
+<!--@TODO: some options should be disabled based on specific selection options-->
 <template>
   <div class="column">
     <div class="column">
@@ -9,10 +10,10 @@
       <div class="column two">
         <div class="content">
           <form class="form">
-            <!--            @TODO: datepicker-->
-            <!--            <div class="form-group">-->
-            <!--            </div>-->
-            <!--        @TODO: some events should be disabled based on the selection of 'stage'-->
+            <!--            <fieldset class="fieldset">-->
+            <!--              <legend>Date</legend>-->
+            <!--              <Datepicker v-model="date" utc></Datepicker>-->
+            <!--            </fieldset>-->
             <fieldset class="fieldset">
               <legend>Current stage the organism</legend>
               <select id="stage">
@@ -98,6 +99,8 @@
 <script lang="ts">
 import { ObservationEvent } from "@/domain/observation-event.enum";
 import { Stage } from "@/domain/stage.enum";
+import Datepicker from "@vuepic/vue-datepicker";
+import "@vuepic/vue-datepicker/dist/main.css";
 
 interface IOption {
   value: string;
@@ -116,6 +119,12 @@ function enumToOptions(enumerator: { [key: string]: string }): IOption[] {
 
 export default {
   name: "CForm",
+  components: { Datepicker },
+  data() {
+    return {
+      date: null,
+    };
+  },
   computed: {
     stageOptions() {
       return enumToOptions(Stage);

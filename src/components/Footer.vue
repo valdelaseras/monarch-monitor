@@ -62,6 +62,7 @@ export default {
       tools: [
         "Vue 3",
         "Vue Router",
+        "Vue Datepicker",
         "TypeScript",
         "Axios",
         "Vitest",
@@ -72,31 +73,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@use "/src/styles/variables";
-
-/*@start footer*/
-.footer {
-  display: flow-root;
-  width: 100vw;
-  height: auto;
-  position: relative;
-  bottom: 0;
-  padding: variables.$vertical-spacing;
-  //@TODO: footer is laid on top of nav due to element order. Using z-index -10 prevents the footer ( links ) from being
-  //clicked on
-}
-/*@end footer*/
-
-/*@start footer link list + link*/
-.footer-link-list > li:not(:last-child) {
-  padding-bottom: variables.$default-padding;
-}
-
-.footer-link {
-  font-weight: 100;
-  text-transform: uppercase;
-}
-/*@end footer link list + link*/
-</style>

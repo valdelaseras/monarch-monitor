@@ -2,10 +2,11 @@
 
 /*@start btn*/
 .btn {
+    display: inline-block;
     text-transform: uppercase;
     padding: 5px variables.$default-padding;
     border-radius: variables.$border-radius-xs;
-    transition: background-color 100ms ease-in-out;
+    transition: background-color variables.$default-transition;
     border-width: 2px;
     border-style: solid;
 }
@@ -37,7 +38,21 @@
 }
 /*@end btn-secondary*/
 
-//TODO: btn-compact, btn-wide, btn-icon, btn-group
+/*@start btn-group*/
+.btn-group > li {
+    display: inline-block;
+}
+.btn-group > li:not(:last-child) {
+    padding-right: variables.$default-padding;
+}
+/*@end btn-group*/
+
+/*@start btn-compact*/
+.btn.btn-compact {
+    padding: 5px 10px;
+}
+/*@end btn-compact*/
+
 
 
 

@@ -1,25 +1,19 @@
-# monarch-monitor
+# MOMO
 
-This template should help get you started developing with Vue 3 in Vite.
+MoMo ( MOnarch MOnitor) is a Vue.js demo app for an application of the job kind.
 
-## Recommended IDE Setup
+## Kia ora,
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+If you are reading this, thank you kindly for your time! I did not have a Vue project at hand that I could 
+share, so I did a little hackaton over the weekend instead.
 
-## Type Support for `.vue` Imports in TS
+Due to time restrictions I tried to spread my time and efforts over a range of aspects in 
+the development process, from UI/UX to DX. This is by no means a finished product, but I hope this
+project can serve as a 'sneak preview' of my code style and capabilities.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+__This hackaton was made possible by coffee, the bad weather and Yaeji ♬♫♪◖(●◡●)◗♪♫♬__
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+---
 
 ## Project Setup
 
