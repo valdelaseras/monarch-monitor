@@ -17,45 +17,60 @@
             aria-label="Add new observation form"
             @submit.prevent="onSubmit"
           >
-            <CSelect
-              id="stage"
-              legend="Current stage the organism"
-              :options="stageOptions"
-              v-model="formData.stage"
-            />
-            <CSelect
-              id="event"
-              legend="Event"
-              :options="eventOptions"
-              v-model="formData.event"
-            />
-            <CRadiogroup
-              id="sex"
-              legend="Sex"
-              :options="sexOptions"
-              v-model="formData.sex"
-            />
-            <CCheckbox
-              id="alive"
-              legend="State of butterfly"
-              label="Alive"
-              checked="true"
-              :aria-checked="true"
-              v-model="formData.alive"
-            />
-            <CInput
-              id="location"
-              legend="Location"
-              type="text"
-              label="General area"
-              v-model="formData.location"
-            />
-            <CTextarea
-              legend="Note"
-              id="note"
-              label="Additional remarks"
-              v-model="formData.note"
-            />
+            <fieldset class="fieldset">
+              <legend>Current stage the organism</legend>
+              <CSelect
+                id="stage"
+                :options="stageOptions"
+                v-model="formData.stage"
+              />
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend>Event</legend>
+              <CSelect
+                id="event"
+                :options="eventOptions"
+                v-model="formData.event"
+              />
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend>Sex</legend>
+              <div class="flex flex-column">
+                <CRadiogroup
+                  id="sex"
+                  :options="sexOptions"
+                  v-model="formData.sex"
+                />
+              </div>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend>State of butterfly</legend>
+              <CCheckbox
+                id="alive"
+                label="Alive"
+                checked="true"
+                :aria-checked="true"
+                v-model="formData.alive"
+              />
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend>Location</legend>
+              <CInput
+                id="location"
+                type="text"
+                label="General area"
+                v-model="formData.location"
+              />
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend>Note</legend>
+              <CTextarea
+                id="note"
+                label="Additional remarks"
+                v-model="formData.note"
+              />
+            </fieldset>
+
             <a class="btn btn-primary" @click="onSubmit()">Submit</a>
           </form>
         </div>
@@ -68,11 +83,11 @@
 import { ObservationEvent } from "@/domain/observation-event.enum";
 import { Stage } from "@/domain/stage.enum";
 import { Sex } from "@/domain/sex.enum";
-import CSelect from "@/components/form-fieldsets/Select.vue";
-import CRadiogroup from "@/components/form-fieldsets/Radiogroup.vue";
-import CTextarea from "@/components/form-fieldsets/Textarea.vue";
-import CCheckbox from "@/components/form-fieldsets/Checkbox.vue";
-import CInput from "@/components/form-fieldsets/Input.vue";
+import CSelect from "@/components/form-elements/Select.vue";
+import CRadiogroup from "@/components/form-elements/Radiogroup.vue";
+import CTextarea from "@/components/form-elements/Textarea.vue";
+import CCheckbox from "@/components/form-elements/Checkbox.vue";
+import CInput from "@/components/form-elements/Input.vue";
 import { ref } from "vue";
 import { useObservationsStore } from "@/store/observations";
 import type { IObservation } from "@/domain/observation.interface";
