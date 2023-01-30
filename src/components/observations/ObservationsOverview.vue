@@ -65,7 +65,7 @@ export default {
     };
 
     onMounted(() => {
-      getObservations();
+      !observations.value.length ? getObservations() : null;
     });
 
     return {

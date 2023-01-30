@@ -1,7 +1,11 @@
 <template>
   <fieldset class="fieldset">
     <legend>{{ legend }}</legend>
-    <select :id="id">
+    <select
+      :id="id"
+      :value="modelValue"
+      @change="$emit('update:modelValue', $event.target.value)"
+    >
       <option
         tabindex="0"
         v-for="option in options"
@@ -14,13 +18,7 @@
   </fieldset>
 </template>
 
-<script>
-export default {
-  name: "CSelect",
-  props: {
-    legend: String,
-    id: String,
-    options: {},
-  },
-};
+<script setup>
+defineProps(["legend", "id", "options", "modelValue"]);
+defineEmits(["update:modelValue"]);
 </script>

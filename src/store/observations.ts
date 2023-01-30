@@ -21,6 +21,7 @@ export const useObservationsStore = defineStore("observations", {
     setObservations(observations: IObservationListItem[]) {
       this.observations = observations;
     },
+    // @TODO: double check with observation-list-item.service, getObservationListItems already does mapping re assets
     addObservation(formData: IObservation) {
       AssetsService.getAssetByLabel(formData.stage).then(
         ({ src, alt }: IAsset) => {

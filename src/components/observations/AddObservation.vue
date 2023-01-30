@@ -21,24 +21,42 @@
               id="stage"
               legend="Current stage the organism"
               :options="stageOptions"
+              v-model="formData.stage"
             />
-            <CSelect id="event" legend="Event" :options="eventOptions" />
-            <CRadiogroup id="sex" legend="Sex" :options="sexOptions" />
+            <CSelect
+              id="event"
+              legend="Event"
+              :options="eventOptions"
+              v-model="formData.event"
+            />
+            <CRadiogroup
+              id="sex"
+              legend="Sex"
+              :options="sexOptions"
+              v-model="formData.sex"
+            />
             <CCheckbox
               id="alive"
               legend="State of butterfly"
               label="Alive"
               checked="true"
               :aria-checked="true"
+              v-model="formData.alive"
             />
             <CInput
               id="location"
               legend="Location"
               type="text"
               label="General area"
+              v-model="formData.location"
             />
-            <CTextarea legend="Note" id="note" label="Additional remarks" />
-            <a class="btn btn-primary" @click="onSubmit">Submit</a>
+            <CTextarea
+              legend="Note"
+              id="note"
+              label="Additional remarks"
+              v-model="formData.note"
+            />
+            <a class="btn btn-primary" @click="onSubmit()">Submit</a>
           </form>
         </div>
       </div>
@@ -55,6 +73,9 @@ import CRadiogroup from "@/components/form-fieldsets/Radiogroup.vue";
 import CTextarea from "@/components/form-fieldsets/Textarea.vue";
 import CCheckbox from "@/components/form-fieldsets/Checkbox.vue";
 import CInput from "@/components/form-fieldsets/Input.vue";
+import { ref } from "vue";
+import { useObservationsStore } from "@/store/observations";
+import type { IObservation } from "@/domain/observation.interface";
 
 interface IOption {
   value: string;
@@ -86,12 +107,21 @@ export default {
     CSelect,
   },
   setup() {
+    const { addObservation } = useObservationsStore();
     const stageOptions = enumToOptions(Stage);
     const eventOptions = enumToOptions(ObservationEvent);
     const sexOptions = enumToOptions(Sex);
+    const formData = ref({
+      stage: Stage.EGG,
+      event: ObservationEvent.ECLOSING,
+      sex: Sex.UNDETERMINED,
+      alive: true,
+      location: "",
+      note: "",
+    } as IObservation);
 
     const onSubmit = () => {
-      console.log("submit form");
+      addObservation(formData.value);
     };
 
     return {
@@ -99,6 +129,7 @@ export default {
       sexOptions,
       eventOptions,
       onSubmit,
+      formData,
     };
   },
 };

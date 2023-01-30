@@ -6,9 +6,11 @@
         <label :for="option.value">
           <input
             type="radio"
-            name="sex"
+            :name="legend"
             :value="option.value"
             :id="option.value"
+            :checked="option.value === modelValue"
+            @change="$emit('update:modelValue', option.value)"
           />
           {{ option.label }}
         </label>
@@ -17,13 +19,7 @@
   </fieldset>
 </template>
 
-<script>
-export default {
-  name: "CRadiogroup",
-  props: {
-    legend: String,
-    id: String,
-    options: {},
-  },
-};
+<script setup>
+defineProps(["legend", "id", "options", "modelValue"]);
+defineEmits(["update:modelValue"]);
 </script>
