@@ -65,6 +65,7 @@ export default {
     };
 
     onMounted(() => {
+      // if there are no observations, get them ( for mock form submission demo purpose )
       !observations.value.length ? getObservations() : null;
     });
 

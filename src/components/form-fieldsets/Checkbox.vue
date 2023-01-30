@@ -18,3 +18,5 @@
 defineProps(["legend", "label", "id", "modelValue"]);
 defineEmits(["update:modelValue"]);
 </script>
+
+<!--@TODO: find out how to properly name component like this ( needs multiname )-->
